@@ -1,6 +1,6 @@
 name = Teambuilder activities
 description = Makes it possible to describe teambuilder activities.
-core = 6.x
+core = 7.x
 package = Features
 php = 5.2.4
 version = 7.x-0.1
