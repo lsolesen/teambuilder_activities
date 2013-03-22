@@ -35,14 +35,14 @@ function teambuilder_activities_field_default_fields() {
       'bundle' => 'activity',
       'default_value' => NULL,
       'deleted' => '0',
-      'description' => 'En aktivitet er en leg eller teambuildingsøvelse.',
+      'description' => '',
       'display' => array(
         'default' => array(
           'label' => 'hidden',
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => '-2',
+          'weight' => '1',
         ),
         'teaser' => array(
           'label' => 'hidden',
@@ -50,9 +50,8 @@ function teambuilder_activities_field_default_fields() {
           'settings' => array(
             'trim_length' => 600,
           ),
-          'trim_length' => '600',
           'type' => 'text_summary_or_trimmed',
-          'weight' => '-2',
+          'weight' => '1',
         ),
       ),
       'entity_type' => 'node',
@@ -60,18 +59,41 @@ function teambuilder_activities_field_default_fields() {
       'label' => 'Beskrivelse',
       'required' => 0,
       'settings' => array(
-        'display_summary' => TRUE,
-        'text_processing' => 1,
+        'better_formats' => array(
+          'allowed_formats' => array(
+            1 => '1',
+            2 => 0,
+            3 => 0,
+          ),
+          'allowed_formats_toggle' => 1,
+          'default_order_toggle' => 0,
+          'default_order_wrapper' => array(
+            'formats' => array(
+              1 => array(
+                'weight' => '-1',
+              ),
+              2 => array(
+                'weight' => '0',
+              ),
+              3 => array(
+                'weight' => '1',
+              ),
+            ),
+          ),
+        ),
+        'display_summary' => 1,
+        'text_processing' => '1',
         'user_register_form' => FALSE,
       ),
       'widget' => array(
+        'active' => 1,
         'module' => 'text',
         'settings' => array(
-          'rows' => 20,
+          'rows' => '20',
           'summary_rows' => 5,
         ),
         'type' => 'text_textarea_with_summary',
-        'weight' => '-2',
+        'weight' => '3',
       ),
     ),
   );
@@ -125,7 +147,7 @@ function teambuilder_activities_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => '3',
+          'weight' => '8',
         ),
         'full' => array(
           'label' => 'above',
@@ -157,10 +179,9 @@ function teambuilder_activities_field_default_fields() {
         ),
         'teaser' => array(
           'label' => 'above',
-          'module' => 'text',
           'settings' => array(),
-          'type' => 'text_default',
-          'weight' => '3',
+          'type' => 'hidden',
+          'weight' => '10',
         ),
         'token' => array(
           'label' => 'above',
@@ -188,7 +209,7 @@ function teambuilder_activities_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '3',
+        'weight' => '8',
       ),
       'widget_type' => 'text_textfield',
     ),
@@ -243,7 +264,7 @@ function teambuilder_activities_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => '2',
+          'weight' => '13',
         ),
         'full' => array(
           'label' => 'above',
@@ -275,10 +296,9 @@ function teambuilder_activities_field_default_fields() {
         ),
         'teaser' => array(
           'label' => 'above',
-          'module' => 'text',
           'settings' => array(),
-          'type' => 'text_default',
-          'weight' => '2',
+          'type' => 'hidden',
+          'weight' => '9',
         ),
         'token' => array(
           'label' => 'above',
@@ -306,7 +326,7 @@ function teambuilder_activities_field_default_fields() {
           'size' => 60,
         ),
         'type' => 'text_textarea',
-        'weight' => '2',
+        'weight' => '16',
       ),
       'widget_type' => 'text_textarea',
     ),
@@ -361,7 +381,7 @@ function teambuilder_activities_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => '-1',
+          'weight' => '2',
         ),
         'full' => array(
           'label' => 'above',
@@ -393,10 +413,9 @@ function teambuilder_activities_field_default_fields() {
         ),
         'teaser' => array(
           'label' => 'above',
-          'module' => 'text',
           'settings' => array(),
-          'type' => 'text_default',
-          'weight' => '-1',
+          'type' => 'hidden',
+          'weight' => '5',
         ),
         'token' => array(
           'label' => 'above',
@@ -424,7 +443,7 @@ function teambuilder_activities_field_default_fields() {
           'size' => 60,
         ),
         'type' => 'text_textarea',
-        'weight' => '-1',
+        'weight' => '5',
       ),
       'widget_type' => 'text_textarea',
     ),
@@ -479,7 +498,7 @@ function teambuilder_activities_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => '4',
+          'weight' => '7',
         ),
         'full' => array(
           'label' => 'inline',
@@ -511,10 +530,9 @@ function teambuilder_activities_field_default_fields() {
         ),
         'teaser' => array(
           'label' => 'inline',
-          'module' => 'text',
           'settings' => array(),
-          'type' => 'text_default',
-          'weight' => '4',
+          'type' => 'hidden',
+          'weight' => '11',
         ),
         'token' => array(
           'label' => 'inline',
@@ -542,7 +560,7 @@ function teambuilder_activities_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '4',
+        'weight' => '10',
       ),
       'widget_type' => 'text_textfield',
     ),
@@ -593,10 +611,10 @@ function teambuilder_activities_field_default_fields() {
           'module' => 'image',
           'settings' => array(
             'image_link' => '',
-            'image_style' => '',
+            'image_style' => 'large',
           ),
           'type' => 'image',
-          'weight' => '8',
+          'weight' => '5',
         ),
         'full' => array(
           'label' => 'hidden',
@@ -643,10 +661,10 @@ function teambuilder_activities_field_default_fields() {
           'module' => 'image',
           'settings' => array(
             'image_link' => '',
-            'image_style' => '',
+            'image_style' => 'medium',
           ),
           'type' => 'image',
-          'weight' => '8',
+          'weight' => '2',
         ),
         'token' => array(
           'label' => 'hidden',
@@ -677,14 +695,21 @@ function teambuilder_activities_field_default_fields() {
       'weight' => '8',
       'widget' => array(
         'active' => '0',
-        'module' => 'image',
+        'module' => 'media',
         'settings' => array(
-          'preview_image_style' => 'thumbnail',
+          'allowed_schemes' => array(
+            0 => 'public',
+            1 => 'private',
+          ),
+          'allowed_types' => array(
+            0 => 'image',
+          ),
+          'browser_plugins' => array(),
           'progress_indicator' => 'bar',
           'use_default_image' => 0,
         ),
-        'type' => 'image_image',
-        'weight' => '8',
+        'type' => 'media_generic',
+        'weight' => '7',
       ),
       'widget_type' => 'imagefield_widget',
     ),
@@ -735,10 +760,10 @@ function teambuilder_activities_field_default_fields() {
           'module' => 'image',
           'settings' => array(
             'image_link' => '',
-            'image_style' => '',
+            'image_style' => 'large',
           ),
           'type' => 'image',
-          'weight' => '9',
+          'weight' => '12',
         ),
         'full' => array(
           'label' => 'above',
@@ -782,13 +807,9 @@ function teambuilder_activities_field_default_fields() {
         ),
         'teaser' => array(
           'label' => 'above',
-          'module' => 'image',
-          'settings' => array(
-            'image_link' => '',
-            'image_style' => '',
-          ),
-          'type' => 'image',
-          'weight' => '9',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '15',
         ),
         'token' => array(
           'label' => 'above',
@@ -819,14 +840,21 @@ function teambuilder_activities_field_default_fields() {
       'weight' => '9',
       'widget' => array(
         'active' => '0',
-        'module' => 'image',
+        'module' => 'media',
         'settings' => array(
-          'preview_image_style' => 'thumbnail',
+          'allowed_schemes' => array(
+            0 => 'public',
+            1 => 'private',
+          ),
+          'allowed_types' => array(
+            0 => 'image',
+          ),
+          'browser_plugins' => array(),
           'progress_indicator' => 'bar',
           'use_default_image' => 0,
         ),
-        'type' => 'image_image',
-        'weight' => '9',
+        'type' => 'media_generic',
+        'weight' => '17',
       ),
       'widget_type' => 'imagefield_widget',
     ),
@@ -867,12 +895,7 @@ function teambuilder_activities_field_default_fields() {
     ),
     'field_instance' => array(
       'bundle' => 'activity',
-      'default_value' => array(
-        0 => array(
-          'value' => '',
-          '_error_element' => 'default_value_widget][field_instruction][0][value',
-        ),
-      ),
+      'default_value' => NULL,
       'deleted' => '0',
       'description' => '',
       'display' => array(
@@ -881,7 +904,7 @@ function teambuilder_activities_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => '1',
+          'weight' => '4',
         ),
         'full' => array(
           'label' => 'above',
@@ -913,10 +936,9 @@ function teambuilder_activities_field_default_fields() {
         ),
         'teaser' => array(
           'label' => 'above',
-          'module' => 'text',
           'settings' => array(),
-          'type' => 'text_default',
-          'weight' => '1',
+          'type' => 'hidden',
+          'weight' => '8',
         ),
         'token' => array(
           'label' => 'above',
@@ -929,24 +951,115 @@ function teambuilder_activities_field_default_fields() {
       'entity_type' => 'node',
       'field_name' => 'field_instruction',
       'label' => 'Instruktion og regler',
-      'required' => FALSE,
+      'required' => 0,
       'settings' => array(
+        'better_formats' => array(
+          'allowed_formats' => array(
+            1 => '1',
+            2 => 0,
+            3 => 0,
+          ),
+          'allowed_formats_toggle' => 1,
+          'default_order_toggle' => 0,
+          'default_order_wrapper' => array(
+            'formats' => array(
+              1 => array(
+                'weight' => '-1',
+              ),
+              2 => array(
+                'weight' => '0',
+              ),
+              3 => array(
+                'weight' => '1',
+              ),
+            ),
+          ),
+        ),
         'text_processing' => '1',
         'user_register_form' => FALSE,
       ),
       'weight' => '1',
       'widget' => array(
-        'active' => '0',
+        'active' => 1,
         'module' => 'text',
         'settings' => array(
-          'default_value_php' => NULL,
           'rows' => '5',
-          'size' => 60,
         ),
         'type' => 'text_textarea',
-        'weight' => '1',
+        'weight' => '4',
       ),
       'widget_type' => 'text_textarea',
+    ),
+  );
+
+  // Exported field: 'node-activity-field_kategori'.
+  $fields['node-activity-field_kategori'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '-1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_kategori',
+      'foreign keys' => array(
+        'tid' => array(
+          'columns' => array(
+            'tid' => 'tid',
+          ),
+          'table' => 'taxonomy_term_data',
+        ),
+      ),
+      'indexes' => array(
+        'tid' => array(
+          0 => 'tid',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'taxonomy',
+      'settings' => array(
+        'allowed_values' => array(
+          0 => array(
+            'vocabulary' => 'kategori',
+            'parent' => '0',
+          ),
+        ),
+      ),
+      'translatable' => '0',
+      'type' => 'taxonomy_term_reference',
+    ),
+    'field_instance' => array(
+      'bundle' => 'activity',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'taxonomy',
+          'settings' => array(),
+          'type' => 'taxonomy_term_reference_link',
+          'weight' => '8',
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '7',
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_kategori',
+      'label' => 'Kategori',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'options',
+        'settings' => array(),
+        'type' => 'options_buttons',
+        'weight' => '2',
+      ),
     ),
   );
 
@@ -999,7 +1112,7 @@ function teambuilder_activities_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => '7',
+          'weight' => '11',
         ),
         'full' => array(
           'label' => 'inline',
@@ -1031,10 +1144,9 @@ function teambuilder_activities_field_default_fields() {
         ),
         'teaser' => array(
           'label' => 'inline',
-          'module' => 'text',
           'settings' => array(),
-          'type' => 'text_default',
-          'weight' => '7',
+          'type' => 'hidden',
+          'weight' => '14',
         ),
         'token' => array(
           'label' => 'inline',
@@ -1062,7 +1174,7 @@ function teambuilder_activities_field_default_fields() {
           'size' => 60,
         ),
         'type' => 'text_textarea',
-        'weight' => '7',
+        'weight' => '14',
       ),
       'widget_type' => 'text_textarea',
     ),
@@ -1117,7 +1229,7 @@ function teambuilder_activities_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => '0',
+          'weight' => '3',
         ),
         'full' => array(
           'label' => 'above',
@@ -1149,10 +1261,9 @@ function teambuilder_activities_field_default_fields() {
         ),
         'teaser' => array(
           'label' => 'above',
-          'module' => 'text',
           'settings' => array(),
-          'type' => 'text_default',
-          'weight' => '0',
+          'type' => 'hidden',
+          'weight' => '6',
         ),
         'token' => array(
           'label' => 'above',
@@ -1180,9 +1291,100 @@ function teambuilder_activities_field_default_fields() {
           'size' => 60,
         ),
         'type' => 'text_textarea',
-        'weight' => '0',
+        'weight' => '6',
       ),
       'widget_type' => 'text_textarea',
+    ),
+  );
+
+  // Exported field: 'node-activity-field_preparation_time'.
+  $fields['node-activity-field_preparation_time'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_preparation_time',
+      'foreign keys' => array(
+        'format' => array(
+          'columns' => array(
+            'format' => 'format',
+          ),
+          'table' => 'filter_format',
+        ),
+      ),
+      'indexes' => array(
+        'format' => array(
+          0 => 'format',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'text',
+      'settings' => array(
+        'max_length' => '255',
+      ),
+      'translatable' => '0',
+      'type' => 'text',
+    ),
+    'field_instance' => array(
+      'bundle' => 'activity',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'text',
+          'settings' => array(),
+          'type' => 'text_default',
+          'weight' => 14,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '4',
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_preparation_time',
+      'label' => 'Forberedelsestid',
+      'required' => 0,
+      'settings' => array(
+        'better_formats' => array(
+          'allowed_formats' => array(
+            1 => '1',
+            2 => '2',
+            3 => '3',
+          ),
+          'allowed_formats_toggle' => 0,
+          'default_order_toggle' => 0,
+          'default_order_wrapper' => array(
+            'formats' => array(
+              1 => array(
+                'weight' => '-1',
+              ),
+              2 => array(
+                'weight' => '0',
+              ),
+              3 => array(
+                'weight' => '1',
+              ),
+            ),
+          ),
+        ),
+        'text_processing' => '0',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'text',
+        'settings' => array(
+          'size' => '60',
+        ),
+        'type' => 'text_textfield',
+        'weight' => '11',
+      ),
     ),
   );
 
@@ -1232,9 +1434,8 @@ function teambuilder_activities_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'above',
-          'module' => 'text',
           'settings' => array(),
-          'type' => 'text_default',
+          'type' => 'hidden',
           'weight' => '11',
         ),
         'full' => array(
@@ -1267,10 +1468,9 @@ function teambuilder_activities_field_default_fields() {
         ),
         'teaser' => array(
           'label' => 'above',
-          'module' => 'text',
           'settings' => array(),
-          'type' => 'text_default',
-          'weight' => '11',
+          'type' => 'hidden',
+          'weight' => '17',
         ),
         'token' => array(
           'label' => 'above',
@@ -1298,7 +1498,7 @@ function teambuilder_activities_field_default_fields() {
           'size' => 60,
         ),
         'type' => 'text_textarea',
-        'weight' => '11',
+        'weight' => '15',
       ),
       'widget_type' => 'text_textarea',
     ),
@@ -1353,7 +1553,7 @@ function teambuilder_activities_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => '6',
+          'weight' => '10',
         ),
         'full' => array(
           'label' => 'inline',
@@ -1385,10 +1585,9 @@ function teambuilder_activities_field_default_fields() {
         ),
         'teaser' => array(
           'label' => 'inline',
-          'module' => 'text',
           'settings' => array(),
-          'type' => 'text_default',
-          'weight' => '6',
+          'type' => 'hidden',
+          'weight' => '13',
         ),
         'token' => array(
           'label' => 'inline',
@@ -1416,7 +1615,7 @@ function teambuilder_activities_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '6',
+        'weight' => '13',
       ),
       'widget_type' => 'text_textfield',
     ),
@@ -1471,7 +1670,7 @@ function teambuilder_activities_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => '5',
+          'weight' => '9',
         ),
         'full' => array(
           'label' => 'inline',
@@ -1503,10 +1702,9 @@ function teambuilder_activities_field_default_fields() {
         ),
         'teaser' => array(
           'label' => 'inline',
-          'module' => 'text',
           'settings' => array(),
-          'type' => 'text_default',
-          'weight' => '5',
+          'type' => 'hidden',
+          'weight' => '12',
         ),
         'token' => array(
           'label' => 'inline',
@@ -1534,7 +1732,7 @@ function teambuilder_activities_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '5',
+        'weight' => '12',
       ),
       'widget_type' => 'text_textfield',
     ),
@@ -1588,7 +1786,7 @@ function teambuilder_activities_field_default_fields() {
           'module' => 'file',
           'settings' => array(),
           'type' => 'file_default',
-          'weight' => '10',
+          'weight' => '7',
         ),
         'full' => array(
           'label' => 'hidden',
@@ -1620,10 +1818,9 @@ function teambuilder_activities_field_default_fields() {
         ),
         'teaser' => array(
           'label' => 'hidden',
-          'module' => 'file',
           'settings' => array(),
-          'type' => 'file_default',
-          'weight' => '10',
+          'type' => 'hidden',
+          'weight' => '16',
         ),
         'token' => array(
           'label' => 'hidden',
@@ -1636,7 +1833,7 @@ function teambuilder_activities_field_default_fields() {
       'entity_type' => 'node',
       'field_name' => 'field_video',
       'label' => 'Video',
-      'required' => FALSE,
+      'required' => 0,
       'settings' => array(
         'description_field' => 0,
         'file_directory' => '',
@@ -1646,56 +1843,31 @@ function teambuilder_activities_field_default_fields() {
       ),
       'weight' => '10',
       'widget' => array(
-        'active' => '0',
+        'active' => 1,
         'module' => 'media',
         'settings' => array(
           'allowed_schemes' => array(
-            0 => 'public',
-            1 => 'private',
+            'private' => 'private',
+            'public' => 'public',
+            'youtube' => 'youtube',
           ),
           'allowed_types' => array(
-            0 => 'image',
+            'audio' => 0,
+            'document' => 0,
+            'image' => 0,
+            'video' => 'video',
           ),
-          'browser_plugins' => array(),
-          'default_value_php' => NULL,
-          'preview_autoplay' => 0,
-          'preview_height' => '350',
-          'preview_width' => '425',
+          'browser_plugins' => array(
+            'media_default--media_browser_1' => 0,
+            'media_default--media_browser_my_files' => 0,
+            'media_internet' => 'media_internet',
+            'upload' => 0,
+            'youtube' => 0,
+          ),
           'progress_indicator' => 'throbber',
-          'providers' => array(
-            'archive' => 0,
-            'bliptv' => 0,
-            'dailymotion' => 0,
-            'google' => 0,
-            'guba' => 0,
-            'imeem' => 0,
-            'jumpcut' => 0,
-            'lastfm' => 0,
-            'livevideo' => 0,
-            'metacafe' => 0,
-            'myspace' => 0,
-            'revver' => 'revver',
-            'sevenload' => 0,
-            'spike' => 0,
-            'tudou' => 0,
-            'ustream' => 0,
-            'ustreamlive' => 0,
-            'veoh' => 0,
-            'vimeo' => 'vimeo',
-            'yahoomusic' => 0,
-            'youtube' => 'youtube',
-            'zzz_custom_url' => 0,
-          ),
-          'thumbnail_default_path' => '',
-          'thumbnail_height' => '90',
-          'thumbnail_link_title' => 'See video',
-          'thumbnail_width' => '120',
-          'video_autoplay' => 0,
-          'video_height' => '350',
-          'video_width' => '425',
         ),
         'type' => 'media_generic',
-        'weight' => '10',
+        'weight' => '8',
       ),
       'widget_type' => 'media_generic',
     ),
@@ -1739,14 +1911,13 @@ function teambuilder_activities_field_default_fields() {
           'module' => 'taxonomy',
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => 10,
+          'weight' => '12',
         ),
         'teaser' => array(
           'label' => 'above',
-          'module' => 'taxonomy',
           'settings' => array(),
-          'type' => 'taxonomy_term_reference_link',
-          'weight' => 10,
+          'type' => 'hidden',
+          'weight' => '3',
         ),
       ),
       'entity_type' => 'node',
@@ -1763,28 +1934,245 @@ function teambuilder_activities_field_default_fields() {
           'size' => 60,
         ),
         'type' => 'taxonomy_autocomplete',
-        'weight' => 0,
+        'weight' => '9',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-activity-title_field'.
+  $fields['node-activity-title_field'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'title_field',
+      'foreign keys' => array(
+        'format' => array(
+          'columns' => array(
+            'format' => 'format',
+          ),
+          'table' => 'filter_format',
+        ),
+      ),
+      'indexes' => array(
+        'format' => array(
+          0 => 'format',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'text',
+      'settings' => array(
+        'max_length' => 255,
+      ),
+      'translatable' => '1',
+      'type' => 'text',
+    ),
+    'field_instance' => array(
+      'bundle' => 'activity',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => 'A field replacing node title.',
+      'display' => array(
+        'default' => array(
+          'label' => 'hidden',
+          'module' => 'title',
+          'settings' => array(
+            'title_class' => '',
+            'title_link' => '',
+            'title_style' => 'h1',
+          ),
+          'type' => 'title_linked',
+          'weight' => '0',
+        ),
+        'teaser' => array(
+          'label' => 'hidden',
+          'module' => 'title',
+          'settings' => array(
+            'title_class' => '',
+            'title_link' => 'content',
+            'title_style' => 'h2',
+          ),
+          'type' => 'title_linked',
+          'weight' => '0',
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'title_field',
+      'label' => 'Titel',
+      'required' => TRUE,
+      'settings' => array(
+        'hide_label' => array(
+          'entity' => 'entity',
+          'page' => 'page',
+        ),
+        'text_processing' => 0,
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'module' => 'text',
+        'settings' => array(
+          'size' => 60,
+        ),
+        'type' => 'text_textfield',
+        'weight' => '1',
+      ),
+    ),
+  );
+
+  // Exported field: 'taxonomy_term-kategori-description_field'.
+  $fields['taxonomy_term-kategori-description_field'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'description_field',
+      'foreign keys' => array(
+        'format' => array(
+          'columns' => array(
+            'format' => 'format',
+          ),
+          'table' => 'filter_format',
+        ),
+      ),
+      'indexes' => array(
+        'format' => array(
+          0 => 'format',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'text',
+      'settings' => array(),
+      'translatable' => '1',
+      'type' => 'text_with_summary',
+    ),
+    'field_instance' => array(
+      'bundle' => 'kategori',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => 'A field replacing taxonomy term description.',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 1,
+        ),
+      ),
+      'entity_type' => 'taxonomy_term',
+      'field_name' => 'description_field',
+      'label' => 'Beskrivelse',
+      'required' => FALSE,
+      'settings' => array(
+        'display_summary' => 0,
+        'hide_label' => array(
+          'entity' => 'entity',
+          'page' => 'page',
+        ),
+        'text_processing' => 1,
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'module' => 'text',
+        'settings' => array(
+          'rows' => 20,
+          'summary_rows' => 5,
+        ),
+        'type' => 'text_textarea_with_summary',
+        'weight' => '1',
+      ),
+    ),
+  );
+
+  // Exported field: 'taxonomy_term-kategori-name_field'.
+  $fields['taxonomy_term-kategori-name_field'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'name_field',
+      'foreign keys' => array(
+        'format' => array(
+          'columns' => array(
+            'format' => 'format',
+          ),
+          'table' => 'filter_format',
+        ),
+      ),
+      'indexes' => array(
+        'format' => array(
+          0 => 'format',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'text',
+      'settings' => array(
+        'max_length' => 255,
+      ),
+      'translatable' => '1',
+      'type' => 'text',
+    ),
+    'field_instance' => array(
+      'bundle' => 'kategori',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => 'A field replacing taxonomy term name.',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'taxonomy_term',
+      'field_name' => 'name_field',
+      'label' => 'Navn',
+      'required' => TRUE,
+      'settings' => array(
+        'hide_label' => array(
+          'entity' => 'entity',
+          'page' => 'page',
+        ),
+        'text_processing' => 0,
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'module' => 'text',
+        'settings' => array(
+          'size' => 60,
+        ),
+        'type' => 'text_textfield',
+        'weight' => '0',
       ),
     ),
   );
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('A field replacing node title.');
+  t('A field replacing taxonomy term description.');
+  t('A field replacing taxonomy term name.');
   t('Beskrivelse');
   t('Billede løsning');
   t('Billede opgave');
-  t('En aktivitet er en leg eller teambuildingsøvelse.');
   t('Forberedelse');
+  t('Forberedelsestid');
   t('Formål');
   t('Gruppestørrelse');
   t('Hvor');
   t('Instruktion og regler');
+  t('Kategori');
   t('Kilde');
   t('Løsning / debriefing');
   t('Materialer');
   t('Målgruppe');
+  t('Navn');
   t('Tags');
   t('Tidsforbrug');
+  t('Titel');
   t('Video');
 
   return $fields;
