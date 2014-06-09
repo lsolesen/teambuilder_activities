@@ -69,7 +69,7 @@ function teambuilder_activities_views_default_views() {
       'separator' => '',
     ),
   );
-  /* Field: Content: Billede opgave */
+  /* Felt: Indhold: Billede opgave */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
   $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
@@ -81,24 +81,24 @@ function teambuilder_activities_views_default_views() {
     'image_link' => 'content',
   );
   $handler->display->display_options['fields']['field_image']['delta_offset'] = '0';
-  /* Field: Content: Title */
+  /* Felt: Indhold: Titel */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = 'Aktivitet';
   $handler->display->display_options['fields']['title']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['title']['alter']['text'] = '<h4>[title]</h4>';
-  /* Field: Content: Kategori */
+  /* Felt: Indhold: Kategori */
   $handler->display->display_options['fields']['field_kategori']['id'] = 'field_kategori';
   $handler->display->display_options['fields']['field_kategori']['table'] = 'field_data_field_kategori';
   $handler->display->display_options['fields']['field_kategori']['field'] = 'field_kategori';
   $handler->display->display_options['fields']['field_kategori']['delta_offset'] = '0';
-  /* Sort criterion: Content: Post date */
+  /* Sorteringskriterie: Indhold: Oprettelsesdato */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Filter criterion: Content: Type */
+  /* Filterkriterie: Indhold: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -107,7 +107,7 @@ function teambuilder_activities_views_default_views() {
   );
   $handler->display->display_options['filters']['type']['group'] = '0';
   $handler->display->display_options['filters']['type']['expose']['operator'] = FALSE;
-  /* Filter criterion: Search: Search Terms */
+  /* Filterkriterie: Søg: Søgeord */
   $handler->display->display_options['filters']['keys']['id'] = 'keys';
   $handler->display->display_options['filters']['keys']['table'] = 'search_index';
   $handler->display->display_options['filters']['keys']['field'] = 'keys';
@@ -117,7 +117,7 @@ function teambuilder_activities_views_default_views() {
   $handler->display->display_options['filters']['keys']['expose']['label'] = 'Søg';
   $handler->display->display_options['filters']['keys']['expose']['operator'] = 'keys_op';
   $handler->display->display_options['filters']['keys']['expose']['identifier'] = 'keys';
-  /* Filter criterion: Content: Has taxonomy term */
+  /* Filterkriterie: Indhold: Har taksonomiterm */
   $handler->display->display_options['filters']['tid']['id'] = 'tid';
   $handler->display->display_options['filters']['tid']['table'] = 'taxonomy_index';
   $handler->display->display_options['filters']['tid']['field'] = 'tid';
@@ -137,6 +137,29 @@ function teambuilder_activities_views_default_views() {
   $handler->display->display_options['menu']['title'] = 'Aktiviteter';
   $handler->display->display_options['menu']['weight'] = '0';
   $handler->display->display_options['menu']['name'] = 'primary-links';
+  $translatables['activity'] = array(
+    t('Defaults'),
+    t('Teambuildingsøvelser'),
+    t('mere'),
+    t('Udfør'),
+    t('Gendan'),
+    t('Sortér efter'),
+    t('Stigende'),
+    t('Faldende'),
+    t('Antal elementer'),
+    t('- Alle -'),
+    t('Forskydning'),
+    t('« første'),
+    t('« forrige'),
+    t('næste »'),
+    t('sidste »'),
+    t('Aktivitet'),
+    t('<h4>[title]</h4>'),
+    t('Kategori'),
+    t('Søg'),
+    t('Nøgleord'),
+    t('Side'),
+  );
   $export['activity'] = $view;
 
   return $export;

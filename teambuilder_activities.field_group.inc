@@ -38,7 +38,7 @@ function teambuilder_activities_field_group_info() {
       'formatter' => 'collapsible',
       'instance_settings' => array(
         'description' => '',
-        'classes' => '',
+        'classes' => ' group-info field-group-fieldset',
         'required_fields' => 1,
       ),
     ),
@@ -70,7 +70,7 @@ function teambuilder_activities_field_group_info() {
       'formatter' => 'collapsible',
       'instance_settings' => array(
         'description' => '',
-        'classes' => '',
+        'classes' => ' group-metadata field-group-fieldset',
       ),
     ),
   );
@@ -102,7 +102,7 @@ function teambuilder_activities_field_group_info() {
       'label' => 'Metadata',
       'instance_settings' => array(
         'required_fields' => 1,
-        'classes' => '',
+        'classes' => ' group-metadata field-group-fieldset',
         'description' => '',
       ),
       'formatter' => 'collapsed',
@@ -130,7 +130,7 @@ function teambuilder_activities_field_group_info() {
     'format_settings' => array(
       'label' => 'Løsning',
       'instance_settings' => array(
-        'classes' => '',
+        'classes' => ' group-solution field-group-fieldset',
         'description' => '',
       ),
       'formatter' => 'collapsed',
@@ -159,7 +159,7 @@ function teambuilder_activities_field_group_info() {
       'label' => 'Løsning',
       'instance_settings' => array(
         'required_fields' => 1,
-        'classes' => '',
+        'classes' => ' group-solution field-group-fieldset',
         'description' => '',
       ),
       'formatter' => 'collapsed',
