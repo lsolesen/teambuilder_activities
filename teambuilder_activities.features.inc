@@ -7,8 +7,10 @@
 /**
  * Implements hook_ctools_plugin_api().
  */
-function teambuilder_activities_ctools_plugin_api() {
-  list($module, $api) = func_get_args();
+function teambuilder_activities_ctools_plugin_api($module = NULL, $api = NULL) {
+  if ($module == "field_group" && $api == "field_group") {
+    return array("version" => "1");
+  }
   if ($module == "strongarm" && $api == "strongarm") {
     return array("version" => "1");
   }
@@ -17,8 +19,8 @@ function teambuilder_activities_ctools_plugin_api() {
 /**
  * Implements hook_views_api().
  */
-function teambuilder_activities_views_api() {
-  return array("version" => "3.0");
+function teambuilder_activities_views_api($module = NULL, $api = NULL) {
+  return array("api" => "3.0");
 }
 
 /**
