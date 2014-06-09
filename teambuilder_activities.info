@@ -1,7 +1,7 @@
 name = Teambuilder activities
 description = Makes it possible to describe teambuilder activities.
 core = 7.x
-package = Features
+package = Teambuilder
 version = 7.x-0.1
 project = teambuilder_activities
 dependencies[] = features
