@@ -24,7 +24,7 @@ class TeambuilderActivity extends Migration {
     );
 
     // Create a MigrateSource object.
-    $this->source = new MigrateSourceCSV(drupal_get_path('module', 'teambuilder_activities') . '/import/activity.csv', $this->csvcolumns(), array('header_rows' => 1), $this->fields());
+    $this->source = new MigrateSourceCSV(drupal_get_path('module', 'teambuilder_activities') . '/import/activity.csv', $this->csvcolumns(), array('header_rows' => 1));
 
     $this->destination = new MigrateDestinationNode('activity');
 
@@ -74,10 +74,8 @@ class TeambuilderActivity extends Migration {
       ->defaultValue(drupal_get_path('module', 'teambuilder_activities') . '/import/images');
   }
 
-  function fields() {
-    return array(
-      'all_images' => 'An array of images, populated during prepareRow().',
-    );
+  function prepareRow($row) {
+    $row->assignment_picture = explode(',', $row->assignment_picture);
   }
 
   function csvcolumns() {
