@@ -93,5 +93,4 @@ features[variable][] = nodewords_nodetype_description_activity
 features[variable][] = nodewords_nodetype_keywords_activity
 features[variable][] = nodewords_nodetype_robots_activity
 features[views_view][] = activity
-
 files[] = teambuilder_activities.migrate.inc

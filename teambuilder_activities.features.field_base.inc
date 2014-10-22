@@ -221,7 +221,7 @@ function teambuilder_activities_field_default_field_bases() {
     'locked' => 0,
     'module' => 'image',
     'settings' => array(
-      'default_image' => NULL,
+      'default_image' => 0,
       'description_field' => 1,
       'list_default' => 1,
       'list_field' => 0,
@@ -255,7 +255,7 @@ function teambuilder_activities_field_default_field_bases() {
     'locked' => 0,
     'module' => 'image',
     'settings' => array(
-      'default_image' => NULL,
+      'default_image' => 0,
       'description_field' => 0,
       'list_default' => 1,
       'list_field' => 0,
